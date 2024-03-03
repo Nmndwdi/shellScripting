@@ -2,7 +2,7 @@
 
 read -p "Enter you pokemon : " pokemon
 
-if [[ $pokemon == "charizard" ]];
+if [[ $pokemon == "charizard" ]]
 then
 	echo "$pokemon is a fire type pokemon"
 elif [[ $pokemon == "squirtle" ]];
@@ -11,7 +11,7 @@ then
 elif [[ $pokemon == "balbasaur" ]];
 then
 	echo "$pokemon is a grass type pokemon"
-elif [[ $pokemon == "pikachu" ]];
+elif [[ $pokemon == "pikachu" ]]
 then
 	echo "$pokemon is a electric type pokemon"
 else
