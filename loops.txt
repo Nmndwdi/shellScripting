@@ -1,0 +1,43 @@
+in shell scripting there are only two loops for loop and while loop , do-while is not available in shell scripting
+
+for loop syntax :
+
+for (( i=0;i<5;i++ ))
+do
+	commands
+done
+
+while loops syntax :
+
+j=0 // initialization
+
+while [[ $j -lt 5 ]]
+do
+	commands
+done
+
+these for and while loops are for performing 5 iterations
+
+in for loop we can you conditional operators like < , <= , > , >= , !=
+while for checking conditions as in while loop these will not work
+instead we use
+
+for Integer Comparison
+-eq : for equal to
+-ne : for not equal to
+-gt : for greater than
+-ge : for greater than or equal to
+-lt : for less than
+-le : for less than or equal to
+< : for less than               // below it do not work in while loop conditions
+> : for greater than
+<= : for less than or equal to
+>= : for greater than or equal to
+
+for String Comparison
+= : for equal to
+== : for equal to
+!= : for not equal to
+< : for less than
+> : for greater than
+-z : for string is null
