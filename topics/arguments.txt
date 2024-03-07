@@ -1,9 +1,0 @@
-the arguments are passed from the terminal while executing the file
-e.g. ./file_name.sh chairzard pikachu greninja
-
-the arguments are accessed from the index on which they are passed starting with 0 ./file_name.sh is the 0th argument , charizard is the 1st argument and pikachu is the 2nd argument and greninja is the 3rd argument and they are accessed with the dollar sign placed just before their index number e.g. $0 , $1 , $2
-
-to get the number of arguments : $#
-to display all the arguments : $@
-
-shift keyword is used to combine all the remaining arguments which are not used

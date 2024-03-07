@@ -1,5 +1,0 @@
-length : ${#str}
-uppercase : ${str^^}
-lowercase : ${str,,}
-replace a substring : ${str/oldSubstring/newSubstring}
-substring : ${str:startIndex:length}
