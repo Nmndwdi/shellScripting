@@ -1,0 +1,18 @@
+infinite loop can be used for constant monitoring and they can be created using for loop , while loop
+
+using true keyword
+while true
+do
+	do something
+	sleep ts  // next iteration after t seconds e.g. sleep 2s
+done
+
+
+for loop without initialization , condition and expression
+for (( ;; ))
+do
+	do something
+	sleep ts
+done
+
+loop without expression is infinite loop

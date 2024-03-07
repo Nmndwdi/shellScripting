@@ -1,0 +1,16 @@
+in this there is no switch keyword instead there is case keyword
+
+e.g.      case $choice in  // choice is variable
+
+then we can give case by providing case value with closing paranthesis
+
+e.g.      a)                  like case a : 
+	  "sum")              like case "sum" : 
+	  10)                 like case 10 : in other languages
+
+;; is used to end the case otherwise it will give error
+
+*) it is default case if none matches then it will be executed
+
+and at last esac is used to end the case statement just like in if
+in if there is fi reverse of if and here is esac reverse of case

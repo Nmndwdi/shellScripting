@@ -1,0 +1,13 @@
+arrays can be created by giving values in paranthesis and values are space separated not comma separated , values can be of different types
+
+values from array can be retrieved as : ${arrname[index]}
+
+all values can be retrived by placing * in place of index as : ${arrname[*]}
+
+the length of the array : ${#arrname[*]}
+
+subarray : ${arrname[*]:startIndex:length}
+
+suffix : ${arrname[*]:startIndex}
+
+adding values to the array : arr+=(value1 value2 ....)
