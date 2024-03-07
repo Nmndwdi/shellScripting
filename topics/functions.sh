@@ -29,3 +29,25 @@ function check_pokemon_type()
 read -p "Enter you pokemon : " pokemon
 
 check_pokemon_type "$pokemon" "gangar"
+
+# function declaration types
+
+# type1) by using function keyword
+
+function greet
+{
+	echo "You are welcome!"
+}
+
+greet
+greet
+
+# type 2) by using paranthesis
+
+hello()
+{
+	echo "Hello!"
+}
+
+hello
+hello
