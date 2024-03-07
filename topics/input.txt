@@ -1,0 +1,5 @@
+input can be taken using read keyword e.g. read name
+
+read -p <message> <variable name> : it is used to take input by first giving a prompt or message e.g. read -p "enter you name : " name
+
+

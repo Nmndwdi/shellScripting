@@ -1,0 +1,7 @@
+redirection command is used to redirect the output of a command to a file
+
+to overwrite the contents of a file with the output of the command we use
+single right shift operator i.e. '>'
+
+and to append the contents of the output to the file we use
+double right shift operator i.e. '>>'

@@ -1,0 +1,8 @@
+bash variables are the predefined variables provided by the shell which can be used directly like
+
+RANDOM variable -> used to generate a random number between 0 and 32767
+UID variable -> used to get the user ID of the logged in user
+USER variable -> used to get the current user
+
+* user id of root user is 0
+if you want your script should be only run by root user then you can check the user id of the logged in user and if it is 0 then you can run the script else you can exit the script by using exit 1

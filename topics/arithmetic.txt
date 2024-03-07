@@ -1,0 +1,19 @@
+you directly cannot do the arithmetic operation else they will be treated as concatenation instead of arithmetic operation
+
+you can do it by using let keyword before variable name or by using double paranthesis
+e.g.
+
+x=10
+y=2
+
+mul=$x*$y  // does concatenation
+
+let mul=$x*$y // does multiplication operation by using let keyword before variable name
+
+add=$(($x+$y))  // by using double paranthesis
+
+you can perform arithmetic operations like addition + , multiplication * , subtraction - , division / , modulus % and exponentiation by using **
+
+division is floor division it does not give decimal value
+
+an operation is performed in double paranthesis (( operation ))

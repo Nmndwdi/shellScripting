@@ -1,0 +1,12 @@
+condition1 && condition2 || condition3
+
+if condition1 is true then condition 2 is executed else 3 will be executed
+
+just like condition ? true : false
+
+? -> &&
+: -> ||
+
+in place of condition2 and condition3 any command can also be given
+
+conditions are executed in [[ condition ]] in double square brackets with space around double square brackets else there will be error
