@@ -1,0 +1,5 @@
+nohup command is used to run scripts in background and getting the output appended in nohup.out file
+
+nohup ./script.sh &
+
+first nohup command is given then file to be executed then at last & is requiredto run the script in background

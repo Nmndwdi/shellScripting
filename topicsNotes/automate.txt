@@ -1,0 +1,32 @@
+if you want to schedule a script or a command then you can you either use 'at' command or crontab
+
+at command is used to schedule a script for only one time after the script is executed for one time it will be removed from the scheduled job list
+
+atq : to view the scheduled jobs list
+atrm <id> : to remove the job with the specified id from the scheduled list
+
+syntax of at :
+
+at 12:09 PM  and in the same way you can provide date month year time
+	./script.sh or bash script.sh or you can give any command
+ctrl + d
+
+the date and time is provided in the same format as date and time is printed by using date command
+
+crontab : if you want to schedule a task which repeat itself after a period of time then you can use crontab
+
+crontab -l : to check existing jobs
+crontab -e : to add a new job , or remove or edit a job
+             basically it opens a crontab editor just like vim and there you
+             can provide scripts for scheduing
+
+syntax :
+
+* * * * * <path to the directory of the script> && <name of the script file>
+
+these five stars are used to give day of week (0-6), month (1-12), day of month (1-31), hour (0-23), minute (0-59) starting from right star to left
+
+means first star is used to give minute and last star is used to give day of the week
+
+e.g.   30 18 * * SUN : it means that it will repeat itself on every sunday at
+                       18:30

@@ -1,0 +1,2 @@
+logger keyword is used to help you logging in your main logs of the system
+and they can be found in : /var/log/messages

@@ -5,3 +5,9 @@ single right shift operator i.e. '>'
 
 and to append the contents of the output to the file we use
 double right shift operator i.e. '>>'
+
+&> /dev/null : if you will execute some command either it's output is printed on the terminal or you redirect it's output in a file but anyone does'nt want either case , neither want to print the output of a command on terminal or redirect it's output in a file so redirect it's output to /dev/null it is used with &>
+
+by using it the output of the command will something like vanished
+
+usecase of it is when you want to perform some action according to the status of the previous command but not want to see the output of the previous command itself , status of previous command can be seen by $?
