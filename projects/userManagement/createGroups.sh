@@ -41,20 +41,24 @@ done
 
 if [[ ${#groups[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These Groups are successfully created"
 	echo "${groups[*]}"
+	echo ""
 fi
 
 if [[ ${#groupAlready[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These Groups are not created as they are already present"
 	echo "${groupAlready[*]}"
+	echo ""
 fi
 
 if [[ ${#groupError[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These Groups cant't be created due to some error please try again !"
 	echo "${groupError[*]}"
+	echo ""
 fi
-
-

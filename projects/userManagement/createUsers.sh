@@ -39,7 +39,7 @@ function userAdd
 	local userName=$1
 	local password=$(generatePassword)
 	local type=$2
-	useradd -m $userName
+	useradd -m $userName &>/dev/null
 	if [[ $? -ne 0 ]]
 	then
 		userError+=( $userName )
@@ -83,24 +83,23 @@ do
 	if [[ $userName == "null" ]]
 	then
 		continue
+	fi
+	if id $userName &>/dev/null
+        then
+	       	userAlready+=( $userName )
+                continue
 	fi	
 	if [[ i+1 -lt len ]]
 	then
 		groupName=${arr[i+1]}
-		if id $userName &>/dev/null
+		if [[ $groupName == "null" ]]
 		then
-			userAlready+=( $userName )
-			continue
+			userAdd $userName 0
+		elif getent group "$groupName" &>/dev/null;
+		then
+			userAdd $userName 2 $groupName
 		else
-			if [[ $groupName == "null" ]]
-			then
-				userAdd $userName 0
-			elif getent group "$groupName" &>/dev/null;
-			then
-				userAdd $userName 2 $groupName
-			else
-                                userAdd $userName 1
-			fi
+                        userAdd $userName 1
 		fi
 	else
 		userAdd $userName 0
@@ -109,6 +108,7 @@ done
 
 if [[ ${#users[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users are created successfully! and added in the provided groups :"
 	#echo "Users with their passwords are: "
 	echo ""
@@ -119,10 +119,12 @@ then
 		echo "Password : ${users[i+1]}"
 		echo ""
 	done
+	echo ""
 fi
 
 if [[ ${#userGroup[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users are created but can't be added to the provided groups as provided groups does not exists :"
 	#echo "Users with their passwords are: "
         echo ""
@@ -133,17 +135,21 @@ then
                 echo "Password : ${userGroup[i+1]}"
                 echo ""
         done
+	echo ""
 fi
 
 if [[ ${#userAlready[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users are not created as they are already present :"
 	echo "${userAlready[*]}"
+	echo ""
 	echo ""
 fi
 
 if [[ ${#userGroupError[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users are created but can't be added to the groups as there is some error in adding them in the group, Please try again to add them in the groups :"
 	#echo "Users with their passwords are: "
         echo ""
@@ -154,11 +160,14 @@ then
                 echo "Password : ${userGroupError[i+1]}"
                 echo ""
         done
+	echo ""
 fi
 
 if [[ ${#userError[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users can't be created due to some error, try again to create them ! :"
 	echo "${userError[*]}"
+	echo ""
 	echo ""
 fi

@@ -39,22 +39,27 @@ done
 
 if [[ ${#users[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users are successfully deleted :"
 	echo ""
 	echo "${users[*]}"
+	echo ""
 fi
 
 if [[ ${#userNot[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users can't be deleted as they are not present :"
 	echo ""
 	echo "${userNot[*]}"
+	echo ""
 fi
 
 if [[ ${#userError[*]} -ne 0 ]]
 then
+	echo ""
 	echo "These users can't be deleted due to some error, Please try again ! :"
 	echo ""
 	echo "${userError[*]}"
+	echo ""
 fi
-

@@ -9,7 +9,7 @@ fi
 
 if [[ $# -le 1 ]]
 then
-        echo "Please provide atleast one User and one Group"
+        echo "Please provide a User and at least one Group"
         exit 1
 fi
 
@@ -45,22 +45,27 @@ done
 
 if [[ ${#groups[*]} -ne 0 ]]
 then
+	echo ""
         echo "The user $userName is successfully removed from these groups :"
         echo ""
         echo "${groups[*]}"
+	echo ""
 fi
 
 if [[ ${#groupNot[*]} -ne 0 ]]
 then
+	echo ""
         echo "The user $userName can't be removed from these groups as $userName is not the part of these groups :"
         echo ""
         echo "${groupNot[*]}"
+	echo ""
 fi
 
 if [[ ${#groupError[*]} -ne 0 ]]
 then
+	echo ""
         echo "The user $userName can't be removed from these groups due to some error, Please try again to remove $userName from these groups ! :"
         echo ""
         echo "${groupError[*]}"
+	echo ""
 fi
-

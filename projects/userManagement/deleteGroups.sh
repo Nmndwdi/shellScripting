@@ -41,22 +41,27 @@ done
 
 if [[ ${#groups[*]} -ne 0 ]]
 then
+	echo ""
         echo "These groups are successfully deleted :"
         echo ""
         echo "${groups[*]}"
+	echo ""
 fi
 
 if [[ ${#groupNot[*]} -ne 0 ]]
 then
+	echo ""
         echo "These groups can't be deleted as they are not present :"
         echo ""
         echo "${groupNot[*]}"
+	echo ""
 fi
 
 if [[ ${#groupError[*]} -ne 0 ]]
 then
+	echo ""
         echo "These groups can't be deleted due to some error, Please try again ! :"
         echo ""
         echo "${groupError[*]}"
+	echo ""
 fi
-
