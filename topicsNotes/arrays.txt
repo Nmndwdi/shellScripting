@@ -4,10 +4,12 @@ values from array can be retrieved as : ${arrname[index]}
 
 all values can be retrived by placing * in place of index as : ${arrname[*]}
 
-the length of the array : ${#arrname[*]}
+the length of the array : ${#arrname[*]} / you can also use '@' in place of '*'
 
 subarray : ${arrname[*]:startIndex:length}
 
 suffix : ${arrname[*]:startIndex}
 
 adding values to the array : arr+=(value1 value2 ....)
+
+removing element from end : unset 'arr[${#arr[@]}-1]'
