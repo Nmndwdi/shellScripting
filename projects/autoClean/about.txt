@@ -1,0 +1,2 @@
+this project is about, how you can automate your cleaning of diskspace
+i.e. automatically zip the files from a directory which are too old or automatically zip the files whose size is too large and move them in a archive folder or you can also remove them , here we will move them in a archive folder and schedule this script to run every sunday at night using crontab

@@ -1,0 +1,1 @@
+this project is about cloning a Django app from github and installing all required dependencies and deploying it on docker using shell Scripting , this project is just made for learning purpose from youtube from trainwithshubham channel
