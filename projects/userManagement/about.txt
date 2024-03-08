@@ -1,0 +1,57 @@
+this project is solely for user Management i.e. creating new users , deleting users , creating groups , deleting groups , change group users , etc
+
+all these files can be executed by only root users or by sudo command
+
+1) createUsers.sh : by executing this you can create new users and add them in a                    group , you can create multiple users at once if you does'nt
+                    want to give the group for a user give 'null' argument for
+                    its group name
+
+./createUsers.sh userName1 groupName1 userName2 null userName3 groupName3 ...
+
+
+2) createGroups.sh : by executing this you can create multiple groups at once
+		     all the groups should be passed as arguments to the file
+
+./createGroups.sh groupName1 groupName2 groupName3 ...
+
+
+3) deleteUsers.sh : by executing it you can delete multiple users at once, all
+                    the users you want to delete should be passed as arguments
+                    to the file
+
+./deleteUsers.sh userName1 userName2 userName3 ...
+
+
+4) deleteGroups.sh : by executing it you can delete multiple groups at once, all
+		     the groups you want to delete should be passed as arguments
+                     to the file
+
+./deleteGroups.sh groupName1 groupName2 groupName3 ...
+
+
+5) userAddGroups.sh : by executing it you can add a user to multiple groups at
+		      once, first argument will be the userName and other
+                      arguments are groupNames
+
+./userAddGroups.sh userName groupName1 groupName2 groupName3 ...
+
+
+6) userDeleteGroups.sh : by executing it you can delete a user from multiple
+                         groups at once, first argument will be the userName and
+                         other arguments are groupNames
+
+./userDeleteGroups.sh userName groupName1 groupName2 groupName3 ...
+
+
+7) groupAddUsers.sh : by executing it you can add multiple users to a group at
+                      once, first argument will be the groupName and other
+                      arguments are userNames
+
+./groupAddUsers.sh groupName userName1 userName2 userName3 ...
+
+
+8) groupDeleteUsers.sh : by executing it you can delete multiple users from a
+                         group at once, first argument will be the groupName
+                         and other arguments are userNames
+
+./groupDeleteUsers.sh groupName userName1 userName2 userName3 ...

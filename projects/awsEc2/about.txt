@@ -1,0 +1,3 @@
+this project is about how to start an AWS Ec2 instance , and connect an AWS Ec2 instance from your terminal using ssh by simply just executing startEc2Instance.sh for starting the instance i.e. to make the state of your instance 'running' and for connecting the instance using ssh you can just execute the file connectEc2Instance.sh without actually visiting to the AWS console
+
+you can just edit the two files and provide actual instance id of your Ec2 instance and you are good to go to use the files
