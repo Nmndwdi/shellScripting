@@ -1,6 +1,0 @@
-[submodule "django-notes-app"]
-	path = django-notes-app
-	url = https://github.com/LondheShubham153/django-notes-app.git
-[submodule "projects/django-notes-app"]
-	path = projects/django-notes-app
-	url = https://github.com/LondheShubham153/django-notes-app.git
